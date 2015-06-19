@@ -207,8 +207,6 @@ function CreateSource($version)
 
   $output = "..\Windows-Distribution\ImageMagick-Windows-$($version).zip"
   CreateZipFile $output ".\Source"
-
-  Copy-Item "Version.txt" "..\Windows-Distribution"
 }
 
 function CheckUpload($version)
@@ -216,7 +214,7 @@ function CheckUpload($version)
   $day = (Get-Date).DayOfWeek
   if ($day -ne "Saturday")
   {
-     Write-Host "Only uploading on Saturday."
+    Write-Host "Only uploading on Saturday."
     Remove-Item ..\Windows-Distribution\*
   }
 }
