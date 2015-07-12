@@ -212,9 +212,9 @@ function CreateSource($version)
 function CheckUpload($version)
 {
   $day = (Get-Date).DayOfWeek
-  if ($day -ne "Saturday")
+  if ($day -ne "Saturday" -And $day -ne "Sunday")
   {
-    Write-Host "Only uploading on Saturday."
+    Write-Host "Only uploading in the weekend."
     Remove-Item ..\Windows-Distribution\*
   }
 }
