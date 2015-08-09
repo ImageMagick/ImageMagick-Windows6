@@ -3,28 +3,28 @@
 clone_repository()
 {
   echo ''
-  echo "Cloning $2"
+  echo "Cloning $3"
 
   branch="master"
-  if [ ! -z "$3" ]; then
-    branch="$3"
-  fi
-
-  dir="$2"
   if [ ! -z "$4" ]; then
-    dir="$4"
+    branch="$4"
   fi
 
-  if [ "$1" == "full" ]; then
+  dir="$3"
+  if [ ! -z "$5" ]; then
+    dir="$5"
+  fi
+
+  if [ "$2" == "full" ]; then
     if [ ! -d "$dir" ]; then
-      git clone -b $branch https://github.com/ImageMagick/$2.git $dir
+      git clone -b $branch $1/$3.git $dir
     fi
     cd $dir
     git pull
     cd ..
   else
     if [ ! -d "$dir" ]; then
-      git clone -b $branch --depth 1 https://github.com/ImageMagick/$2.git $dir
+      git clone -b $branch --depth 1 $1/$3.git $dir
     fi
   fi
 }
@@ -58,31 +58,31 @@ copy_externals()
   cp -R externals/zlib VisualMagick
 }
 
-clone_repository $1 'bzlib'
-clone_repository $1 'cairo'
-clone_repository $1 'contrib' 'contrib-6'
-clone_repository $1 'croco'
-clone_repository $1 'exr'
-clone_repository $1 'ffi'
-clone_repository $1 'glib'
-clone_repository $1 'ImageMagick' 'ImageMagick-6'
-clone_repository $1 'jbig'
-clone_repository $1 'jp2'
-clone_repository $1 'jpeg'
-clone_repository $1 'lcms'
-clone_repository $1 'librsvg'
-clone_repository $1 'libxml'
-clone_repository $1 'lqr'
-clone_repository $1 'openjpeg'
-clone_repository $1 'pango'
-clone_repository $1 'pixman'
-clone_repository $1 'png'
-clone_repository $1 'tiff'
-clone_repository $1 'ttf'
-clone_repository $1 'VisualMagick' 'VisualMagick-6'
-clone_repository $1 'webp'
-clone_repository $1 'win2k' 'win2k-6'
-clone_repository $1 'zlib'
+clone_repository $1 $2 'bzlib'
+clone_repository $1 $2 'cairo'
+clone_repository $1 $2 'contrib' 'contrib-6'
+clone_repository $1 $2 'croco'
+clone_repository $1 $2 'exr'
+clone_repository $1 $2 'ffi'
+clone_repository $1 $2 'glib'
+clone_repository $1 $2 'ImageMagick' 'ImageMagick-6'
+clone_repository $1 $2 'jbig'
+clone_repository $1 $2 'jp2'
+clone_repository $1 $2 'jpeg-turbo' 'master' 'jpeg'
+clone_repository $1 $2 'lcms'
+clone_repository $1 $2 'librsvg'
+clone_repository $1 $2 'libxml'
+clone_repository $1 $2 'lqr'
+clone_repository $1 $2 'openjpeg'
+clone_repository $1 $2 'pango'
+clone_repository $1 $2 'pixman'
+clone_repository $1 $2 'png'
+clone_repository $1 $2 'tiff'
+clone_repository $1 $2 'ttf'
+clone_repository $1 $2 'VisualMagick' 'VisualMagick-6'
+clone_repository $1 $2 'webp'
+clone_repository $1 $2 'win2k' 'win2k-6'
+clone_repository $1 $2 'zlib'
 
-clone_repository $1 'VisualMagick' 'master' 'externals'
+clone_repository $1 $2 'VisualMagick' 'master' 'externals'
 copy_externals
