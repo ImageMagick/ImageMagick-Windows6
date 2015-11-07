@@ -199,7 +199,8 @@ function CreateSource($version)
   $root = Get-Item ..
   ForEach ($dir in $root.GetDirectories())
   {
-    if ($dir.Name -eq "AppVeyor" -Or $dir.Name -eq "Windows-Distribution")
+    if ($dir.Name -eq "AppVeyor" -Or $dir.Name -eq "Windows-Distribution" -Or
+        $dir.Name -eq "externals")
     {
       continue;
     }
@@ -208,6 +209,7 @@ function CreateSource($version)
     {
       Remove-Item "$($dir.FullName)\.git" -recurse -force
     }
+
     Write-Host "Adding $($dir.Name)"
     Copy-Item $dir.FullName $folder -recurse
   }
