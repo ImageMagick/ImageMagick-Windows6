@@ -38,6 +38,7 @@ copy_externals()
   cp -R externals/dcraw VisualMagick
   cp -R externals/exr VisualMagick
   cp -R externals/ffi VisualMagick
+  cp -R externals/flif VisualMagick
   cp -R externals/glib VisualMagick
   cp -R externals/iptcutil VisualMagick
   cp -R externals/jbig VisualMagick
@@ -64,6 +65,7 @@ clone_repository $1 $2 'contrib' 'contrib-6'
 clone_repository $1 $2 'croco'
 clone_repository $1 $2 'exr'
 clone_repository $1 $2 'ffi'
+clone_repository $1 $2 'flif'
 clone_repository $1 $2 'glib'
 clone_repository $1 $2 'ImageMagick' 'ImageMagick-6'
 clone_repository $1 $2 'jbig'
