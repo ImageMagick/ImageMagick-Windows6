@@ -1,0 +1,2 @@
+Import-Module "C:\ProgramData\chocolatey\helpers\chocolateyInstaller.psm1"
+Install-ChocolateyPackage "InnoSetup.app" "exe" "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-" "file:///C:/InnoSetup/innosetup-5.5.9-unicode.exe"
