@@ -55,7 +55,6 @@ environment:
       im_name:     "source"
 
 install:
-  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-http-proxy.ps1'))
   - cd AppVeyor
   - Install.cmd %im_platform%
 
@@ -74,7 +73,6 @@ deploy:
   provider: FTP
   protocol: ftp
   host: magick.imagemagick.org
-  beta: true
   folder: /ImageMagick-6
   username: upload
   password:
