@@ -71,13 +71,12 @@ test: off
 
 deploy:
   provider: FTP
-  protocol: ftp
+  protocol: sftp
   host: magick.imagemagick.org
   folder: /ImageMagick-6
   username: upload
   password:
     secure: 5jIgwMyyjTcIfLY/Xqk7dg==
-  beta: true
 
 init:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
