@@ -77,6 +77,7 @@ deploy:
   username: upload
   password:
     secure: 5jIgwMyyjTcIfLY/Xqk7dg==
+  beta: true
 
 init:
   - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))

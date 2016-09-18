@@ -77,3 +77,4 @@ deploy:
   username: upload
   password:
     secure: 5jIgwMyyjTcIfLY/Xqk7dg==
+  beta: true
