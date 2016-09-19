@@ -70,10 +70,5 @@ build_script:
 test: off
 
 deploy:
-  provider: FTP
-  protocol: sftp
-  host: magick.imagemagick.org
-  folder: /ImageMagick-6
-  username: upload
-  password:
-    secure: 5jIgwMyyjTcIfLY/Xqk7dg==
+  - provider: Environment
+    name: ImageMagick6
