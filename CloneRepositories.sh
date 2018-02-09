@@ -48,6 +48,7 @@ copy_externals()
   cp -R externals/jp2 VisualMagick
   cp -R externals/jpeg VisualMagick
   cp -R externals/lcms VisualMagick
+  cp -R externals/libde265 VisualMagick
   cp -R externals/libraw VisualMagick
   cp -R externals/librsvg VisualMagick
   cp -R externals/libxml VisualMagick
@@ -77,6 +78,7 @@ clone_repository $1 $2 'jbig'
 clone_repository $1 $2 'jp2'
 clone_repository $1 $2 'jpeg-turbo' 'master' 'jpeg'
 clone_repository $1 $2 'lcms'
+clone_repository $1 $2 'libde265'
 clone_repository $1 $2 'libraw'
 clone_repository $1 $2 'librsvg'
 clone_repository $1 $2 'libxml'
