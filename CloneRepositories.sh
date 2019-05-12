@@ -42,6 +42,7 @@ copy_externals()
   cp -R externals/exr VisualMagick
   cp -R externals/ffi VisualMagick
   cp -R externals/flif VisualMagick
+  cp -R externals/freetype VisualMagick
   cp -R externals/glib VisualMagick
   cp -R externals/iptcutil VisualMagick
   cp -R externals/jbig VisualMagick
@@ -61,7 +62,6 @@ copy_externals()
   cp -R externals/pixman VisualMagick
   cp -R externals/png VisualMagick
   cp -R externals/tiff VisualMagick
-  cp -R externals/ttf VisualMagick
   cp -R externals/webp VisualMagick
   cp -R externals/zlib VisualMagick
 }
@@ -74,6 +74,7 @@ clone_repository $1 $2 'dcraw'
 clone_repository $1 $2 'exr'
 clone_repository $1 $2 'ffi'
 clone_repository $1 $2 'flif'
+clone_repository $1 $2 'freetype'
 clone_repository $1 $2 'glib'
 clone_repository $1 $2 'ImageMagick6' master 'ImageMagick'
 clone_repository $1 $2 'jbig'
@@ -92,7 +93,6 @@ clone_repository $1 $2 'pango'
 clone_repository $1 $2 'pixman'
 clone_repository $1 $2 'png'
 clone_repository $1 $2 'tiff'
-clone_repository $1 $2 'ttf'
 clone_repository $1 $2 'VisualMagick' 'VisualMagick-6'
 clone_repository $1 $2 'webp'
 clone_repository $1 $2 'win2k' 'win2k-6'
