@@ -7,6 +7,7 @@
 /externals
 /ffi
 /flif
+/freetype
 /glib
 /ImageMagick
 /jbig
@@ -25,7 +26,6 @@
 /pixman
 /png
 /tiff
-/ttf
 /VisualMagick
 /webp
 /win2k
