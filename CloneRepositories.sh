@@ -68,7 +68,7 @@ copy_externals()
 
 clone_repository $1 $2 'bzlib'
 clone_repository $1 $2 'cairo'
-clone_repository $1 $2 'contrib' 'contrib-6'
+clone_repository $1 $2 'contrib6' 'master' 'contrib'
 clone_repository $1 $2 'croco'
 clone_repository $1 $2 'dcraw'
 clone_repository $1 $2 'exr'
@@ -95,7 +95,7 @@ clone_repository $1 $2 'png'
 clone_repository $1 $2 'tiff'
 clone_repository $1 $2 'VisualMagick6' 'master' 'VisualMagick'
 clone_repository $1 $2 'webp'
-clone_repository $1 $2 'win2k' 'win2k-6'
+clone_repository $1 $2 'win2k6' 'master' 'win2k'
 clone_repository $1 $2 'zlib'
 
 clone_repository $1 $2 'VisualMagick' 'master' 'externals'
