@@ -56,6 +56,7 @@ copy_externals()
   cp -R externals/librsvg VisualMagick
   cp -R externals/libxml VisualMagick
   cp -R externals/lqr VisualMagick
+  cp -R externals/OpenCL VisualMagick
   cp -R externals/openjpeg VisualMagick
   cp -R externals/pango VisualMagick
   cp -R externals/PerlMagick VisualMagick
