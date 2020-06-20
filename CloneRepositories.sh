@@ -34,6 +34,7 @@ clone_repository()
 
 copy_externals()
 {
+  cp -R externals/aom VisualMagick
   cp -R externals/bzlib VisualMagick
   cp -R externals/cairo VisualMagick
   cp -R externals/configure VisualMagick
@@ -67,6 +68,7 @@ copy_externals()
   cp -R externals/zlib VisualMagick
 }
 
+clone_repository $1 $2 'aom'
 clone_repository $1 $2 'bzlib'
 clone_repository $1 $2 'cairo'
 clone_repository $1 $2 'contrib6' 'master' 'contrib'
