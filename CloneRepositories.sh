@@ -44,7 +44,9 @@ copy_externals()
   cp -R externals/ffi VisualMagick
   cp -R externals/flif VisualMagick
   cp -R externals/freetype VisualMagick
+  cp -R externals/fribidi VisualMagick
   cp -R externals/glib VisualMagick
+  cp -R externals/harfbuzz VisualMagick
   cp -R externals/iptcutil VisualMagick
   cp -R externals/jbig VisualMagick
   cp -R externals/jp2 VisualMagick
@@ -78,7 +80,9 @@ clone_repository $1 $2 'exr'
 clone_repository $1 $2 'ffi'
 clone_repository $1 $2 'flif'
 clone_repository $1 $2 'freetype'
+clone_repository $1 $2 'fribidi'
 clone_repository $1 $2 'glib'
+clone_repository $1 $2 'harfbuzz'
 clone_repository $1 $2 'ImageMagick6' 'master' 'ImageMagick'
 clone_repository $1 $2 'jbig'
 clone_repository $1 $2 'jp2'
