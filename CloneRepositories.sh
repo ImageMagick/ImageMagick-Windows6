@@ -70,6 +70,15 @@ copy_externals()
   cp -R externals/zlib VisualMagick
 }
 
+clone_imagemagick()
+{
+  if [ ! -d "../ImageMagick" ]; then
+    clone_repository $1 $2 'ImageMagick6' 'master' 'ImageMagick'
+  else
+    cp -R ../ImageMagick ImageMagick
+  fi
+}
+
 clone_repository $1 $2 'aom'
 clone_repository $1 $2 'bzlib'
 clone_repository $1 $2 'cairo'
@@ -83,7 +92,6 @@ clone_repository $1 $2 'freetype'
 clone_repository $1 $2 'fribidi'
 clone_repository $1 $2 'glib'
 clone_repository $1 $2 'harfbuzz'
-clone_repository $1 $2 'ImageMagick6' 'master' 'ImageMagick'
 clone_repository $1 $2 'jbig'
 clone_repository $1 $2 'jp2'
 clone_repository $1 $2 'jpeg-turbo' 'master' 'jpeg'
@@ -107,3 +115,5 @@ clone_repository $1 $2 'zlib'
 
 clone_repository $1 $2 'VisualMagick' 'master' 'externals'
 copy_externals
+
+clone_imagemagick $1 $2
