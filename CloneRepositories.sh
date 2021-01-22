@@ -5,14 +5,10 @@ clone_repository()
   echo ''
   echo "Cloning $3"
 
-  branch="master"
-  if [ ! -z "$4" ]; then
-    branch="$4"
-  fi
-
+  branch="main"
   dir="$3"
-  if [ ! -z "$5" ]; then
-    dir="$5"
+  if [ ! -z "$4" ]; then
+    dir="$4"
   fi
 
   if [ "$2" == "full" ]; then
@@ -50,7 +46,7 @@ copy_externals()
   cp -R externals/iptcutil VisualMagick
   cp -R externals/jbig VisualMagick
   cp -R externals/jp2 VisualMagick
-  cp -R externals/jpeg VisualMagick
+  cp -R externals/jpeg-turbo VisualMagick
   cp -R externals/lcms VisualMagick
   cp -R externals/libde265 VisualMagick
   cp -R externals/libheif VisualMagick
@@ -73,7 +69,7 @@ copy_externals()
 clone_imagemagick()
 {
   if [ ! -d "../ImageMagick" ]; then
-    clone_repository $1 $2 'ImageMagick6' 'master' 'ImageMagick'
+    clone_repository $1 $2 'ImageMagick6' 'ImageMagick'
   else
     cp -R ../ImageMagick ImageMagick
   fi
@@ -87,7 +83,7 @@ fi
 clone_repository $1 $2 'aom'
 clone_repository $1 $2 'bzlib'
 clone_repository $1 $2 'cairo'
-clone_repository $1 $2 'contrib6' 'master' 'contrib'
+clone_repository $1 $2 'contrib6' 'contrib'
 clone_repository $1 $2 'croco'
 clone_repository $1 $2 'dcraw'
 clone_repository $1 $2 'exr'
@@ -99,7 +95,7 @@ clone_repository $1 $2 'glib'
 clone_repository $1 $2 'harfbuzz'
 clone_repository $1 $2 'jbig'
 clone_repository $1 $2 'jp2'
-clone_repository $1 $2 'jpeg-turbo' 'master' 'jpeg'
+clone_repository $1 $2 'jpeg-turbo'
 clone_repository $1 $2 'lcms'
 clone_repository $1 $2 'libde265'
 clone_repository $1 $2 'libheif'
@@ -113,12 +109,12 @@ clone_repository $1 $2 'pango'
 clone_repository $1 $2 'pixman'
 clone_repository $1 $2 'png'
 clone_repository $1 $2 'tiff'
-clone_repository $1 $2 'VisualMagick6' 'master' 'VisualMagick'
+clone_repository $1 $2 'VisualMagick6' 'VisualMagick'
 clone_repository $1 $2 'webp'
-clone_repository $1 $2 'win2k6' 'master' 'win2k'
+clone_repository $1 $2 'win2k6' 'win2k'
 clone_repository $1 $2 'zlib'
 
-clone_repository $1 $2 'VisualMagick' 'master' 'externals'
+clone_repository $1 $2 'VisualMagick' 'externals'
 copy_externals
 
 clone_imagemagick $1 $2
