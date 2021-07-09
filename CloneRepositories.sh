@@ -61,6 +61,7 @@ copy_externals()
   cp -R externals/PerlMagick VisualMagick
   cp -R externals/pixman VisualMagick
   cp -R externals/png VisualMagick
+  cp -R externals/raqm VisualMagick
   cp -R externals/tiff VisualMagick
   cp -R externals/webp VisualMagick
   cp -R externals/zlib VisualMagick
@@ -108,6 +109,7 @@ clone_repository $1 $2 'openjpeg'
 clone_repository $1 $2 'pango'
 clone_repository $1 $2 'pixman'
 clone_repository $1 $2 'png'
+clone_repository $1 $2 'raqm'
 clone_repository $1 $2 'tiff'
 clone_repository $1 $2 'VisualMagick6' 'VisualMagick'
 clone_repository $1 $2 'webp'
