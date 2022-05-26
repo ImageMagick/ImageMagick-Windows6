@@ -36,25 +36,22 @@ copy_externals()
   cp -R externals/configure VisualMagick
   cp -R externals/croco VisualMagick
   cp -R externals/dcraw VisualMagick
+  cp -R externals/de265 VisualMagick
   cp -R externals/exr VisualMagick
   cp -R externals/ffi VisualMagick
   cp -R externals/flif VisualMagick
   cp -R externals/freetype VisualMagick
   cp -R externals/fribidi VisualMagick
   cp -R externals/glib VisualMagick
+  cp -R externals/heif VisualMagick
   cp -R externals/harfbuzz VisualMagick
   cp -R externals/iptcutil VisualMagick
   cp -R externals/jbig VisualMagick
   cp -R externals/jp2 VisualMagick
   cp -R externals/jpeg-turbo VisualMagick
   cp -R externals/lcms VisualMagick
-  cp -R externals/libde265 VisualMagick
-  cp -R externals/libheif VisualMagick
-  cp -R externals/liblzma VisualMagick
-  cp -R externals/libraw VisualMagick
-  cp -R externals/librsvg VisualMagick
-  cp -R externals/libxml VisualMagick
   cp -R externals/lqr VisualMagick
+  cp -R externals/lzma VisualMagick
   cp -R externals/OpenCL VisualMagick
   cp -R externals/openjpeg VisualMagick
   cp -R externals/pango VisualMagick
@@ -62,8 +59,11 @@ copy_externals()
   cp -R externals/pixman VisualMagick
   cp -R externals/png VisualMagick
   cp -R externals/raqm VisualMagick
+  cp -R externals/raw VisualMagick
+  cp -R externals/rsvg VisualMagick
   cp -R externals/tiff VisualMagick
   cp -R externals/webp VisualMagick
+  cp -R externals/xml VisualMagick
   cp -R externals/zlib VisualMagick
 }
 
@@ -87,6 +87,7 @@ clone_repository $1 $2 'cairo'
 clone_repository $1 $2 'contrib6' 'contrib'
 clone_repository $1 $2 'croco'
 clone_repository $1 $2 'dcraw'
+clone_repository $1 $2 'de265'
 clone_repository $1 $2 'exr'
 clone_repository $1 $2 'ffi'
 clone_repository $1 $2 'flif'
@@ -94,26 +95,25 @@ clone_repository $1 $2 'freetype'
 clone_repository $1 $2 'fribidi'
 clone_repository $1 $2 'glib'
 clone_repository $1 $2 'harfbuzz'
+clone_repository $1 $2 'heif'
 clone_repository $1 $2 'jbig'
 clone_repository $1 $2 'jp2'
 clone_repository $1 $2 'jpeg-turbo'
 clone_repository $1 $2 'lcms'
-clone_repository $1 $2 'libde265'
-clone_repository $1 $2 'libheif'
-clone_repository $1 $2 'liblzma'
-clone_repository $1 $2 'libraw'
-clone_repository $1 $2 'librsvg'
-clone_repository $1 $2 'libxml'
+clone_repository $1 $2 'lzma'
 clone_repository $1 $2 'lqr'
 clone_repository $1 $2 'openjpeg'
 clone_repository $1 $2 'pango'
 clone_repository $1 $2 'pixman'
 clone_repository $1 $2 'png'
 clone_repository $1 $2 'raqm'
+clone_repository $1 $2 'raw'
+clone_repository $1 $2 'rsvg'
 clone_repository $1 $2 'tiff'
 clone_repository $1 $2 'VisualMagick6' 'VisualMagick'
 clone_repository $1 $2 'webp'
 clone_repository $1 $2 'win2k6' 'win2k'
+clone_repository $1 $2 'xml'
 clone_repository $1 $2 'zlib'
 
 clone_repository $1 $2 'VisualMagick' 'externals'
