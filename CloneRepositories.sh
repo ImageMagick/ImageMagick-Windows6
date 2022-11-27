@@ -46,8 +46,8 @@ copy_externals()
   cp -R externals/heif VisualMagick
   cp -R externals/harfbuzz VisualMagick
   cp -R externals/iptcutil VisualMagick
+  cp -R externals/jasper VisualMagick
   cp -R externals/jbig VisualMagick
-  cp -R externals/jp2 VisualMagick
   cp -R externals/jpeg-turbo VisualMagick
   cp -R externals/lcms VisualMagick
   cp -R externals/lqr VisualMagick
