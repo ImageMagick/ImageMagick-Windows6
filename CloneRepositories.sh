@@ -37,6 +37,7 @@ copy_externals()
   cp -R externals/croco VisualMagick
   cp -R externals/dcraw VisualMagick
   cp -R externals/de265 VisualMagick
+  cp -R externals/deflate VisualMagick
   cp -R externals/exr VisualMagick
   cp -R externals/ffi VisualMagick
   cp -R externals/flif VisualMagick
